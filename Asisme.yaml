@@ -8,7 +8,7 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxy-groups:
-- name: Tadho clik
+- name: Tadho klik
   type: select
   proxies:
   - vmess
@@ -119,4 +119,4 @@ rules:
   - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
   - GEOIP,IR,DIRECT
   - RULE-SET,Adblock,REJECT
-  - MATCH,Tadho clik
+  - MATCH,Tadho klik
