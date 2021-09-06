@@ -64,7 +64,7 @@ proxy-providers:
   7six vmess:
     type: http
     path: ./vmess.yaml
-    url: https://raw.githubusercontent.com/7siix/konpiknganu/main/Konpikvms.yaml
+    url: https://raw.githubusercontent.com/7siix/konpikasis/main/Asisvms.yaml
     interval: 3600
     health-check:
       enable: true
@@ -75,7 +75,7 @@ proxy-providers:
   7six trojan:
     type: http
     path: ./trojan.yaml
-    url: https://raw.githubusercontent.com/7siix/konpiknganu/main/Konpiktrjn.yaml
+    url: https://raw.githubusercontent.com/7siix/konpikasis/main/Asistrj.yaml
     interval: 3600
     health-check:
       enable: true
