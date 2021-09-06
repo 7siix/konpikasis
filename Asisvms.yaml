@@ -1,0 +1,32 @@
+proxies:
+  - name: edukasi sg
+    type: vmess
+    server: 104.17.2.81
+    port: 80
+    uuid: 1fe2d5b8-f03d-4da9-9a1e-21e22750b511
+    alterId: 64
+    cipher: auto
+    udp: true
+    tls: false
+    skip-cert-verify: true
+    servername: null
+    network: ws
+    ws-path: /seno
+    ws-headers:
+      Host: sg-vpn.seno.my.id
+      
+  - name: edukasi id
+    type: vmess
+    server: 104.17.2.81
+    port: 80
+    uuid: 050ec1c7-4a32-42ff-9bde-1eb9a912c362
+    alterId: 64
+    cipher: auto
+    udp: true
+    tls: false
+    skip-cert-verify: true
+    servername: null
+    network: ws
+    ws-path: /v2rayws
+    ws-headers:
+      Host: cloudpro.romszz.fun
