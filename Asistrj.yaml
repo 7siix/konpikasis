@@ -1,0 +1,24 @@
+proxies:
+  - name: game sg1
+    type: trojan
+    server: sg-vpn.seno.my.id
+    port: 1443
+    password: senovpn
+    udp: true
+    sni: m.pubgmobile.com
+    alpn:
+       - h2
+       - http/1.1
+    skip-cert-verify: true
+
+  - name: game sg2
+    type: trojan
+    server: sg2-vpn.seno.my.id
+    port: 1443
+    password: senovpn
+    udp: true
+    sni: m.pubgmobile.com
+    alpn:
+       - h2
+       - http/1.1
+    skip-cert-verify: true
