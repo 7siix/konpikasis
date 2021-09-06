@@ -119,4 +119,4 @@ rules:
   - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
   - GEOIP,IR,DIRECT
   - RULE-SET,Adblock,REJECT
-  - MATCH,7six
+  - MATCH,Tadho clik
