@@ -110,13 +110,13 @@ rule-providers:
   Adblock :
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/7siix/punya76/main/adblock.yaml
+    url: https://raw.githubusercontent.com/7siix/punya76/main/adblock.txt
     path: ./ruleset/adblock.yaml
     interval: 86400
   LAN:
     type: http
     behavior: ipcidr
-    url: https://raw.githubusercontent.com/7siix/punya76/main/LAN.yaml
+    url: https://raw.githubusercontent.com/7siix/punya76/main/LAN.txt
     path: ./ruleset/LAN.yaml
     interval: 86400
 
