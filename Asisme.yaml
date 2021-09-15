@@ -88,7 +88,7 @@ proxy-providers:
     type: http
     path: ./vmess.yaml
     url: https://raw.githubusercontent.com/7siix/konpikasis/main/Asisvms.yaml
-    interval: 3600
+    interval: 900
     health-check:
       enable: true
       interval: 300
@@ -99,7 +99,7 @@ proxy-providers:
     type: http
     path: ./trojan.yaml
     url: https://raw.githubusercontent.com/7siix/konpikasis/main/Asistrj.yaml
-    interval: 3600
+    interval: 900
     health-check:
       enable: true
       interval: 300
