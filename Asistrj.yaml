@@ -1,7 +1,7 @@
 proxies:
   - name: game sg1
     type: trojan
-    server: sg-vpn.seno.my.id
+    server: 35.219.10.130
     port: 1443
     password: senovpn
     udp: true
@@ -11,13 +11,37 @@ proxies:
        - http/1.1
     skip-cert-verify: true
 
-  - name: game sg2
+  - name: tiktok sg1
     type: trojan
-    server: sg2-vpn.seno.my.id
+    server: 35.219.10.130
     port: 1443
     password: senovpn
     udp: true
+    sni: vt.tiktok.com
+    alpn:
+       - h2
+       - http/1.1
+    skip-cert-verify: true
+
+  - name: game id
+    type: trojan
+    server: cloudpro.romszz.fun
+    port: 8443
+    password: fe312e2f-ad47-4de4-aa97-3767ac3325d5
+    udp: true
     sni: m.pubgmobile.com
+    alpn:
+       - h2
+       - http/1.1
+    skip-cert-verify: true
+
+  - name: youtube id 
+    type: trojan
+    server: cloudpro.romszz.fun
+    port: 8443
+    password: fe312e2f-ad47-4de4-aa97-3767ac3325d5
+    udp: true
+    sni: m.youtube.com
     alpn:
        - h2
        - http/1.1
