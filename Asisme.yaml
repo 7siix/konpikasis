@@ -59,7 +59,7 @@ proxy-groups:
   use:
   - 7six trojan
 
-- name: all ping
+- name: silahkan donasi 5k saja jika nyaman. Donasi tersebut untuk mengembangkan server ini supaya lebih baik.
   type: url-test
   tolerance: 50
   use:
