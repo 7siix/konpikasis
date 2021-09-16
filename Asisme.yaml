@@ -31,26 +31,21 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
 proxy-groups:
-- name: Tadho klik
+- name: proxy
   type: select
   proxies:
-  - vmess
-  - Trojan
+  - Tadho 📥
   - Auto Vmess
   - Auto Trojan
   - LB vmess
   - LB Trojan
   - all ping
-- name: vmess
+
+- name: Tadho 📥
   type: select
   use:
-  - 7six vmess
-
-- name: Trojan
-  type: select
-  use:
-  - 7six trojan
-
+    - vmess
+    - Trojan
 - name: Auto Vmess
   type: url-test
   tolerance: 50
@@ -153,7 +148,7 @@ rules:
   - SRC-PORT,7777,DIRECT
   - RULE-SET,Adblock,REJECT
   - RULE-SET,LAN,DIRECT,no-resolve
-  - MATCH,Tadho klik
+  - MATCH,proxy
 #    ╔══╗═════╔╗═════
 #    ╚╗╔╬═╦═╦═╣╠╦╦╦╦╗
 #    ═║║║╩╣║║╬║═╣║║║║
