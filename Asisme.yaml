@@ -39,7 +39,7 @@ proxy-groups:
   - Auto Trojan
   - LB vmess
   - LB Trojan
-  - silahkan donasi 5k saja jika nyaman. Donasi tersebut untuk mengembangkan server ini supaya lebih baik.
+  - Donasi 5k/bulan via Dana
 
 - name: Tadho 📥
   type: select
@@ -59,7 +59,7 @@ proxy-groups:
   use:
   - 7six trojan
 
-- name: silahkan donasi 5k saja jika nyaman. Donasi tersebut untuk mengembangkan server ini supaya lebih baik.
+- name: Donasi 5k/bulan via Dana
   type: url-test
   tolerance: 50
   use:
