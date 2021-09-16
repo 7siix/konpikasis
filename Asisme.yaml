@@ -44,8 +44,9 @@ proxy-groups:
 - name: Tadho 📥
   type: select
   use:
-    - vmess
-    - Trojan
+    - 7six vmess
+    - 7six trojan
+
 - name: Auto Vmess
   type: url-test
   tolerance: 50
