@@ -64,6 +64,7 @@ proxy-groups:
   tolerance: 50
   use:
   - 7six trojan
+  - 7six vmess
 
 - name: LB vmess
   type: load-balance
