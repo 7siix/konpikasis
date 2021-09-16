@@ -39,7 +39,7 @@ proxy-groups:
   - Auto Trojan
   - LB vmess
   - LB Trojan
-  - Donasi 5k/bulan via Dana
+  - Donasi 5k/bln via Dana
 
 - name: Tadho 📥
   type: select
@@ -59,7 +59,7 @@ proxy-groups:
   use:
   - 7six trojan
 
-- name: Donasi 5k/bulan via Dana
+- name: Donasi 5k/bln via Dana
   type: url-test
   tolerance: 50
   use:
