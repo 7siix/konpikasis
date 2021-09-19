@@ -21,13 +21,13 @@ dns:
   enable: true
   listen: 0.0.0.0:53
   default-nameserver:
-    - 8.8.8.8
-    - 8.8.4.4
+    - 8.26.56.26
+    - 8.20.247.20
   nameserver:
-    - 8.8.8.8 
-    - 8.8.4.4 
+    - 8.26.56.26
+    - 8.20.247.20 
     - tls://dns.rubyfish.cn:853 
-    - https://8.8.8.8/dns-query 
+    - https://8.26.56.26/dns-query 
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
 proxy-groups:
