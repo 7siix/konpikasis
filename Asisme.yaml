@@ -31,6 +31,12 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
 proxy-groups:
+- name: Tadho 📥
+  type: select
+  use:
+    - 7six vmess
+    - 7six trojan
+
 - name: proxy
   type: select
   proxies:
@@ -39,13 +45,7 @@ proxy-groups:
   - Auto Trojan
   - LB vmess
   - LB Trojan
-  - Donasi 5k/bln via Dana
-
-- name: Tadho 📥
-  type: select
-  use:
-    - 7six vmess
-    - 7six trojan
+  - auto all
 
 - name: Auto Vmess
   type: url-test
@@ -59,7 +59,7 @@ proxy-groups:
   use:
   - 7six trojan
 
-- name: Donasi 5k/bln via Dana
+- name: auto all
   type: url-test
   tolerance: 50
   use:
