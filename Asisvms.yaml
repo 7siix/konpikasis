@@ -31,7 +31,7 @@ proxies:
     ws-headers:
       Host: sgdo.seno.my.id
 
-  - name: game sg2
+  - name: game sg
     type: vmess
     server: cf-vod.nimo.tv
     port: 443
