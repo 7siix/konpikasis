@@ -34,14 +34,12 @@ proxy-groups:
 - name: Tadho 📥
   type: select
   use:
-7six provider
+    - 7six provider
 
 - name: proxy
   type: select
   proxies:
   - Tadho 📥
-  - Auto Vmess
-  - Auto Trojan
   - auto all
   - LB all
 
