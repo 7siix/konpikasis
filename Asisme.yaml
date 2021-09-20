@@ -107,7 +107,7 @@ proxy-providers:
 
   7six Provider 3:
     type: http
-    path: ./proxy/nganu/7/6/zonk/blank/xnxx/0/zero.yaml
+    path: ./proxy/nganu/7/6/zonk/blank/xnxx/0/0.yaml
     url: https://raw.githubusercontent.com/7siix/konpikasis/main/Asistrj.yaml
     interval: 900
     health-check:
