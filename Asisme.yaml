@@ -43,13 +43,13 @@ proxy-groups:
   - auto all
   - LB all
 
-- name: Auto all
+- name: Auto ping
   type: url-test
   tolerance: 50
   use:
   - 7six provider
 
-- name: LB all
+- name: stabil
   type: load-balance
   strategy: consistent-hashing
   disable-udp: false
