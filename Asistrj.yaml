@@ -1,13 +1,2 @@
 proxies:
-  - name: tiktok sg1
-    type: trojan
-    server: 35.219.10.130
-    port: 1443
-    password: senovpn
-    udp: true
-    sni: vt.tiktok.com
-    alpn:
-       - h2
-       - http/1.1
-    skip-cert-verify: true
 
