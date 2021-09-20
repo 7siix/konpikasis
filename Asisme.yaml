@@ -83,7 +83,7 @@ proxy-groups:
 proxy-providers:
   7six provider 1:
     type: http
-    path: ./proxy/nganu/7/6/zonk/blank/xnxx/0.yaml
+    path: ./proxy/0.yaml
     url: https://raw.githubusercontent.com/7siix/konpikasis/main/Asisvms.yaml
     interval: 900
     health-check:
@@ -94,7 +94,7 @@ proxy-providers:
 
   7six Provider 2:
     type: http
-    path: ./proxy/nganu/7/6/zonk/blank/xnxx/0/0.yaml
+    path: ./proxy/0.yaml
     url: https://raw.githubusercontent.com/7siix/konpikasis/main/Asistrj.yaml
     interval: 900
     health-check:
