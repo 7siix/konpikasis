@@ -34,8 +34,7 @@ proxy-groups:
 - name: Tadho 📥
   type: select
   use:
-    - 7six vmess
-    - 7six trojan
+7six provider
 
 - name: proxy
   type: select
@@ -43,59 +42,27 @@ proxy-groups:
   - Tadho 📥
   - Auto Vmess
   - Auto Trojan
-  - LB vmess
-  - LB Trojan
   - auto all
+  - LB all
 
-- name: Auto Vmess
+- name: Auto all
   type: url-test
   tolerance: 50
   use:
-  - 7six vmess
+  - 7six provider
 
-- name: Auto Trojan
-  type: url-test
-  tolerance: 50
-  use:
-  - 7six trojan
-
-- name: auto all
-  type: url-test
-  tolerance: 50
-  use:
-  - 7six trojan
-  - 7six vmess
-
-- name: LB vmess
+- name: LB all
   type: load-balance
   strategy: consistent-hashing
   disable-udp: false
   use:
-  - 7six vmess
-
-- name: LB Trojan
-  type: load-balance
-  strategy: consistent-hashing
-  disable-udp: false
-  use:
-  - 7six trojan
+  - 7six provider
 
 proxy-providers:
-  7six vmess:
+  7six provider:
     type: http
-    path: ./vmess.yaml
-    url: https://raw.githubusercontent.com/7siix/konpikasis/main/Asisvms.yaml
-    interval: 900
-    health-check:
-      enable: true
-      interval: 60
-      lazy: true
-      url: http://www.gstatic.com/generate_204
-
-  7six trojan:
-    type: http
-    path: ./trojan.yaml
-    url: https://raw.githubusercontent.com/7siix/konpikasis/main/Asistrj.yaml
+    path: ./7six.yaml
+    url: https://raw.githubusercontent.com/7siix/konpikasis/main/Asis.txt
     interval: 900
     health-check:
       enable: true
