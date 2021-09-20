@@ -57,7 +57,7 @@ proxy-groups:
   type: url-test
   tolerance: 50
   use:
-  - 7six provider 3
+  - 7six provider 2
 
 - name: auto all
   type: url-test
