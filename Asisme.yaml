@@ -52,34 +52,35 @@ proxy-groups:
   type: url-test
   tolerance: 50
   use:
-  - 7six vmess
+  - 7six provider 1
 
 - name: Auto Trojan
   type: url-test
   tolerance: 50
   use:
-  - 7six trojan
+  - 7six provider 3
 
 - name: auto all
   type: url-test
   tolerance: 50
   use:
-  - 7six trojan
-  - 7six vmess
+  - 7six provider 1
+  - 7six provider 2
+  - 7six provider 3
 
 - name: LB vmess
   type: load-balance
   strategy: consistent-hashing
   disable-udp: false
   use:
-  - 7six vmess
+  - 7six provider 1
 
 - name: LB Trojan
   type: load-balance
   strategy: consistent-hashing
   disable-udp: false
   use:
-  - 7six trojan
+  - 7six provider 3
 
 proxy-providers:
   7six provider 1:
