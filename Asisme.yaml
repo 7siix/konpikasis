@@ -40,8 +40,8 @@ proxy-groups:
   type: select
   proxies:
   - Tadho 📥
-  - auto all
-  - LB all
+  - Auto ping
+  - Stabil
 
 - name: Auto ping
   type: url-test
@@ -49,7 +49,7 @@ proxy-groups:
   use:
   - 7six provider
 
-- name: stabil
+- name: Stabil
   type: load-balance
   strategy: consistent-hashing
   disable-udp: false
