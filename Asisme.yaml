@@ -16,18 +16,21 @@ log-level: info
 ipv6: false
 external-controller: 127.0.0.1:9090
 external-ui: folder
-interface-name: en0
+interface-name: 7six
 dns:
   enable: true
   listen: 0.0.0.0:53
   default-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
     - 8.26.56.26
     - 8.20.247.20
   nameserver:
-    - 8.26.56.26
-    - 8.20.247.20 
+    - 114.114.114.114
+    - 119.29.29.29
+    - https://dns.google/dns-query
     - tls://dns.rubyfish.cn:853 
-    - https://8.26.56.26/dns-query 
+    - tls://8.8.8.8:853
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
 proxy-groups:
@@ -60,7 +63,7 @@ proxy-providers:
   7six provider:
     type: http
     path: ./7six.yaml
-    url: https://raw.githubusercontent.com/7siix/konpikasis/main/Asis.txt
+    url: https://raw.githubusercontent.com/7siix/konpikasis/main/Asis.yamo
     interval: 900
     health-check:
       enable: true
@@ -72,14 +75,32 @@ rule-providers:
   Adblock :
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/7siix/punya76/main/adblock.txt
+    url: https://raw.githubusercontent.com/7siix/punya76/main/adblock.yaml
     path: ./ruleset/adblock.yaml
     interval: 86400
   LAN:
     type: http
     behavior: ipcidr
-    url: https://raw.githubusercontent.com/7siix/punya76/main/LAN.txt
+    url: https://raw.githubusercontent.com/7siix/punya76/main/LAN.yaml
     path: ./ruleset/LAN.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt
+    path: ./ruleset/google.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
+    path: ./ruleset/private.yaml
+    interval: 86400
+  reject:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    path: ./ruleset/reject.yaml
     interval: 86400
 
 rules:
@@ -106,15 +127,44 @@ rules:
   - DOMAIN-KEYWORD,adservice,REJECT
   - DOMAIN-KEYWORD,analytics,REJECT
   - DOMAIN-KEYWORD,analysis,REJECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - PROCESS-NAME,v2ray,DIRECT
+  - PROCESS-NAME,xray,DIRECT
+  - PROCESS-NAME,naive,DIRECT
+  - PROCESS-NAME,trojan,DIRECT
+  - PROCESS-NAME,trojan-go,DIRECT
+  - PROCESS-NAME,ss-local,DIRECT
+  - PROCESS-NAME,privoxy,DIRECT
+  - PROCESS-NAME,leaf,DIRECT
+  - PROCESS-NAME,Surge,DIRECT
+  - PROCESS-NAME,Surge 2,DIRECT
+  - PROCESS-NAME,Surge 3,DIRECT
+  - PROCESS-NAME,Surge 4,DIRECT
+  - PROCESS-NAME,Surge%202,DIRECT
+  - PROCESS-NAME,Surge%203,DIRECT
+  - PROCESS-NAME,Surge%204,DIRECT
+  - PROCESS-NAME,Thunder,DIRECT
+  - PROCESS-NAME,DownloadService,DIRECT
+  - PROCESS-NAME,qBittorrent,DIRECT
+  - PROCESS-NAME,Transmission,DIRECT
+  - PROCESS-NAME,fdm,DIRECT
+  - PROCESS-NAME,aria2c,DIRECT
+  - PROCESS-NAME,Folx,DIRECT
+  - PROCESS-NAME,NetTransport,DIRECT
+  - PROCESS-NAME,uTorrent,DIRECT
+  - PROCESS-NAME,WebTorrent,DIRECT
   - SRC-IP-CIDR,192.168.1.201/32,DIRECT
   - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
   - GEOIP,IR,DIRECT
   - IP-CIDR,127.0.0.0/8,DIRECT
-  - GEOIP,CN,DIRECT
   - DST-PORT,80,DIRECT
   - SRC-PORT,7777,DIRECT
   - RULE-SET,Adblock,REJECT
   - RULE-SET,LAN,DIRECT,no-resolve
+  - RULE-SET,google,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,REJECT
   - MATCH,proxy
 #    ╔══╗═════╔╗═════
 #    ╚╗╔╬═╦═╦═╣╠╦╦╦╦╗
