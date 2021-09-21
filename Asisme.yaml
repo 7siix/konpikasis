@@ -63,7 +63,7 @@ proxy-providers:
   7six provider:
     type: http
     path: ./7six.yaml
-    url: https://raw.githubusercontent.com/7siix/konpikasis/main/Asis.yamo
+    url: https://raw.githubusercontent.com/7siix/konpikasis/main/Asis.yaml
     interval: 900
     health-check:
       enable: true
