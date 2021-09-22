@@ -33,6 +33,13 @@ dns:
     - tls://8.8.8.8:853
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - 8.8.8.8:53
+    - tcp://8.8.8.8:53
+  auto-route: true
 proxy-groups:
 - name: Tadho 📥
   type: select
