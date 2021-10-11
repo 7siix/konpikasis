@@ -85,12 +85,6 @@ rule-providers:
     url: https://raw.githubusercontent.com/7siix/punya76/main/adblock.yaml
     path: ./ruleset/adblock.yaml
     interval: 86400
-  LAN:
-    type: http
-    behavior: ipcidr
-    url: https://raw.githubusercontent.com/7siix/punya76/main/LAN.yaml
-    path: ./ruleset/LAN.yaml
-    interval: 86400
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
   - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
@@ -122,7 +116,6 @@ rules:
   - DST-PORT,80,DIRECT
   - SRC-PORT,7777,DIRECT
   - RULE-SET,Adblock,REJECT
-  - RULE-SET,LAN,DIRECT,no-resolve
   - MATCH,proxy
 #    ╔══╗═════╔╗═════
 #    ╚╗╔╬═╦═╦═╣╠╦╦╦╦╗
